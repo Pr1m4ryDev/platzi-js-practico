@@ -1,4 +1,4 @@
-# platzi-curso-practico-javascript
+# curso-practico-javascript
 
 Curso Práctico de JavaScript - Platzi
 
@@ -22,4 +22,3 @@ Curso Práctico de JavaScript - Platzi
 - Segundo paso: implementar la fórmulas en JavaScript 
 - Tercer paso: crear funciones
 - Cuarto paso: integrar JS con HTML
-# curso-practico-javascript
