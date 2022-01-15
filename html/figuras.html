@@ -4,12 +4,142 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/figuras.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Figuras geométricas | Curso practico JS | Platzi</title>
   </head>
   <body>
-    <section>
-      <h1>Figuras geométricas</h1>
-    </section>
+    <header class="header"><h1>Calculadora figuras geométricas</h1></header>
+    <main class="main-container">
+      <section class="cards-container">
+        <div class="card">
+          <h1 class="card-title">Cuadrado</h1>
+          <div class="fig-container"><div class="square"></div></div>
+          <form action="">
+            <div class="form-col">
+              <label for="ladoCuadrado"
+                >Escribe cuánto mide cada lado de tu cuadrado.</label
+              >
+              <input
+                type="number"
+                name="ladoCuadrado"
+                id="ladoCuadrado"
+                placeholder="Lados"
+              />
+            </div>
+            <div class="form-row">
+              <button
+                class="primary-button"
+                type="button"
+                onclick="calcPerimetroCuadr()"
+              >
+                Calcular perímetro
+              </button>
+              <button
+                class="secondary-button"
+                type="button"
+                onclick="calcAreaCuadr()"
+              >
+                Calcular área
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="card">
+          <h1 class="card-title">Triángulo</h1>
+          <div class="fig-container"><div class="triangle"></div></div>
+          <form action="">
+            <div class="form-col">
+              <label
+                >Escribe cuánto mide cada lado de tu triángulo y su
+                altura.</label
+              >
+              <div class="form-row">
+                <input
+                  type="number"
+                  name="ladoATriangulo"
+                  id="ladoATriangulo"
+                  placeholder="Lado A"
+                />
+                <input
+                  type="number"
+                  name="ladoBTriangulo"
+                  id="ladoBTriangulo"
+                  placeholder="Lado B"
+                />
+                <input
+                  type="number"
+                  name="baseTriangulo"
+                  id="baseTriangulo"
+                  placeholder="Base"
+                />
+                <input
+                  type="number"
+                  name="alturaTriangulo"
+                  id="alturaTriangulo"
+                  placeholder="Altura"
+                />
+              </div>
+            </div>
+            <div class="form-row" style="margin: 0px;">
+              <button
+                class="primary-button"
+                type="button"
+                onclick="calcPerimetroTriang()"
+              >
+                Calcular perímetro
+              </button>
+              <button
+                class="secondary-button"
+                type="button"
+                onclick="calcAreaTriang()"
+              >
+                Calcular área
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="card">
+          <h1 class="card-title">Círculo</h1>
+          <div class="fig-container"><div class="circle"></div></div>
+          <form action="">
+            <div class="form-col">
+              <label for="radioCirulo" style="padding: 10px;"
+                >Escribe cuánto mide el radio de tu círculo.
+              </label>
+              <input
+                type="number"
+                name="radioCirulo"
+                id="radioCirulo"
+                placeholder="Radio"
+              />
+            </div>
+            <div class="form-row">
+              <button
+                class="primary-button"
+                type="button"
+                onclick="calcPerimetroCircu()"
+              >
+                Calcular perímetro
+              </button>
+              <button
+                class="secondary-button"
+                type="button"
+                onclick="calcAreaCircu()"
+              >
+                Calcular área
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
     <script src="../js/figuras.js" />
   </body>
 </html>

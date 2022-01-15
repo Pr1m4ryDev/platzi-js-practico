@@ -17,7 +17,6 @@ const mainCuadrado = () => {
   `);
   console.groupEnd();
 };
-mainCuadrado();
 
 //Triángulo
 const perimetroTriangulo = (triangulo) =>
@@ -48,8 +47,6 @@ const mainTriangulo = () => {
   console.groupEnd();
 };
 
-mainTriangulo();
-
 //Círculo
 const diametroCirculo = (circulo) => circulo.radio * 2;
 const perimetroCirculo = (circulo) => circulo.diametro * Math.PI;
@@ -75,4 +72,53 @@ const mainCirculo = () => {
   console.groupEnd();
 };
 
-mainCirculo();
+//Interactuar con HTML
+
+const calcPerimetroCuadr = () => {
+  let cuadrado = {
+    lado: parseFloat(document.getElementById("ladoCuadrado").value),
+  };
+  alert(perimetroCuadrado(cuadrado));
+};
+
+const calcAreaCuadr = () => {
+  let cuadrado = {
+    lado: parseFloat(document.getElementById("ladoCuadrado").value),
+  };
+  alert(areaCuadrado(cuadrado));
+};
+
+const calcPerimetroTriang = () => {
+  let triangulo = {
+    lado1: parseFloat(document.getElementById("ladoATriangulo").value),
+    lado2: parseFloat(document.getElementById("ladoBTriangulo").value),
+    base: parseFloat(document.getElementById("baseTriangulo").value),
+    altura: parseFloat(document.getElementById("alturaTriangulo").value),
+  };
+  alert(perimetroTriangulo(triangulo));
+};
+
+const calcAreaTriang = () => {
+  let triangulo = {
+    lado1: parseFloat(document.getElementById("ladoATriangulo").value),
+    lado2: parseFloat(document.getElementById("ladoBTriangulo").value),
+    base: parseFloat(document.getElementById("baseTriangulo").value),
+    altura: parseFloat(document.getElementById("alturaTriangulo").value),
+  };
+  alert(areaTriangulo(triangulo));
+};
+
+const calcPerimetroCircu = () => {
+  let circulo = {
+    radio: parseFloat(document.getElementById("radioCirulo").value),
+  };
+  circulo.diametro = diametroCirculo(circulo);
+  alert(Math.round(perimetroCirculo(circulo)*100)/100);
+};
+
+const calcAreaCircu = () => {
+  let circulo = {
+    radio: parseFloat(document.getElementById("radioCirulo").value),
+  };
+  alert(Math.round(areaCirculo(circulo)*100)/100);
+};
